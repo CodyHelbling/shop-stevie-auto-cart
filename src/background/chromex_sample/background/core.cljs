@@ -35,10 +35,13 @@
     (remove-client! client)))
 
 ; -- event handlers ---------------------------------------------------------------------------------------------------------
+(def pieces ["one" "two"])
+
 
 (defn handle-client-connection! [client]
   (add-client! client)
   (post-message! client "hello from BACKGROUND PAGE!")
+  (post-message! client pieces)
   (run-client-message-loop! client))
 
 (defn tell-clients-about-new-tab! []
