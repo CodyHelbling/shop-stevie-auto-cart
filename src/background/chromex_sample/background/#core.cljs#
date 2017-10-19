@@ -35,12 +35,13 @@
     (remove-client! client)))
 
 ; -- event handlers ---------------------------------------------------------------------------------------------------------
-(def pieces ["Alice Top" "Poop"])
+(def pieces ["Aulana Embroidered Top" "Poop"])
 
 
 (defn handle-client-connection! [client]
   (add-client! client)
   (post-message! client "hello from BACKGROUND PAGE!")
+  ; Send over desired pieces!
   (post-message! client pieces)
   (run-client-message-loop! client))
 
