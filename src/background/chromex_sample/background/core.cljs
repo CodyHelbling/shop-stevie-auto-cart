@@ -35,7 +35,7 @@
     (remove-client! client)))
 
 ; -- event handlers ---------------------------------------------------------------------------------------------------------
-(def pieces ["Alice Top" "Poop"])
+(def pieces ["Alice Top" "Aloha Printed Dress" "Poop"])
 
 
 (defn handle-client-connection! [client]
